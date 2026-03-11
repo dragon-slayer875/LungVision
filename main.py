@@ -1,6 +1,6 @@
 """
-app.py — Streamlit front-end for LungVision (Keras / TF, 4-class).
-Run with: uv run streamlit run app.py
+main.py — Streamlit front-end for LungVision (Keras / TF, 4-class).
+Run with: uv run streamlit run main.py
 """
 
 import os

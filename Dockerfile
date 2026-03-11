@@ -23,7 +23,7 @@ COPY pyproject.toml ./
 RUN uv sync --no-dev
 
 # ── Copy application code ─────────────────────────────────────────────────────
-COPY app.py feedback_store.py ./
+COPY main.py feedback_store.py ./
 COPY models/ ./models/
 
 # ── Streamlit config ──────────────────────────────────────────────────────────
@@ -46,4 +46,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
     CMD curl -f http://localhost:8501/_stcore/health || exit 1
 
 # ── Entrypoint ────────────────────────────────────────────────────────────────
-CMD ["uv", "run", "streamlit", "run", "app.py"]
+CMD ["uv", "run", "streamlit", "run", "main.py"]

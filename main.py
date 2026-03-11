@@ -1,5 +1,5 @@
 """
-app.py — Streamlit front-end for PneumoVision (Keras / TF, 4-class).
+app.py — Streamlit front-end for LungVision (Keras / TF, 4-class).
 Run with: uv run streamlit run app.py
 """
 
@@ -12,7 +12,7 @@ import numpy as np
 
 from feedback_store import build_row, get_store
 
-st.set_page_config(page_title="PneumoVision", page_icon="🫁", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="LungVision", page_icon="🫁", layout="wide", initial_sidebar_state="expanded")
 
 st.markdown("""
 <style>
@@ -164,7 +164,7 @@ def demo_result() -> dict:
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
-    st.markdown("## 🫁 PneumoVision")
+    st.markdown("## 🫁 LungVision")
     st.markdown("<p style='color:#4a5568;font-size:0.8rem;font-family:DM Mono,monospace;'>ResNet-50 × DenseNet-121 · 4-Class</p>", unsafe_allow_html=True)
     st.divider()
 
@@ -422,4 +422,3 @@ with tab4:
         )
 
 st.divider()
-st.caption("PneumoVision · Research use only · Not a substitute for clinical diagnosis")

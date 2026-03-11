@@ -1,9 +1,9 @@
 services:
-  pneumovision:
+  lungvision:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: pneumovision
+    container_name: lungvision
     ports:
       - "8501:8501"
     volumes:

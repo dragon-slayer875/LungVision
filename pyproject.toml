@@ -1,5 +1,5 @@
 [project]
-name = "pneumo-vision"
+name = "lung-vision"
 version = "0.1.0"
 description = "Ensemble Pneumonia Detection from Chest X-Rays (Keras / TensorFlow)"
 readme = "README.md"

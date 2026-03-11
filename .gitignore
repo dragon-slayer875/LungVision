@@ -1,6 +1,5 @@
 # Model weights — too large for git, store separately
 weights/
-models/
 
 # Feedback runtime data
 feedback/

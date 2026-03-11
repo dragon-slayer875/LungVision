@@ -1,0 +1,17 @@
+# Model weights — too large for git, store separately
+weights/
+models/
+
+# Feedback runtime data
+feedback/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Tools
+.ruff_cache/
+.DS_Store

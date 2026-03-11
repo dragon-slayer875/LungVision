@@ -1,0 +1,24 @@
+services:
+  pneumovision:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pneumovision
+    ports:
+      - "8501:8501"
+    volumes:
+      # Model weights — mount from host so you don't bake them into the image
+      - ./weights:/app/weights:ro
+      # Feedback storage — persists CSV and SQLite db across container restarts
+      - ./feedback:/app/feedback
+    environment:
+      - PYTHONUNBUFFERED=1
+      # Suppress TensorFlow info/warning logs (0=all, 1=info, 2=warn, 3=error)
+      - TF_CPP_MIN_LOG_LEVEL=2
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s

@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# Feedback data (mounted as volume at runtime)
+feedback/
+
+# Dev tools
+.ruff_cache/
+*.egg-info/
+
+# Git
+.git/
+.gitignore
+
+# Docs
+README.md
